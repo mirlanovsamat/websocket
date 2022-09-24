@@ -30,4 +30,4 @@ app.get('/api', (req, res) => {
   res.send('balblabla')
 })
 
-app.listen(port, () => console.log(`Server listens http://${host}:${port}`))
+http.listen(port, () => console.log(`Server listens http://${host}:${port}`))
