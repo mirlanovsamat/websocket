@@ -26,7 +26,7 @@ const app = new Vue({
         }
     },
     created() {
-        this.socket = io('http://https://websocket-discovery.herokuapp.com/')
+        this.socket = io('https://websocket-discovery.herokuapp.com/')
         this.socket.on('msgToClient', (message) => {
             this.receivedMessage(message)
         })
