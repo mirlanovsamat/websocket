@@ -4,8 +4,9 @@ const http = require('http').createServer(app);
 const ws = require('socket.io')(http);
 const { join } = require('path');
 const cors = require("cors")
+require('dotenv').config()
 const host = 'localhost'
-const port = 3000
+const port = process.env.PORT || 5000
 let clients = []
 
 app.use(cors({origin: '*'}))
@@ -29,4 +30,4 @@ app.get('/api', (req, res) => {
   res.send('balblabla')
 })
 
-app.listen(port, host, () => console.log(`Server listens http://${host}:${port}`))
+app.listen(port, () => console.log(`Server listens http://${host}:${port}`))
