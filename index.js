@@ -24,11 +24,9 @@ ws.on('connection', (socket) => {
     })
 })  
 
-
-
 app.use(express.static(join(__dirname, 'static')));
 app.get('/api', (req, res) => {
   res.send('balblabla')
 })
 
-http.listen(port, host, () => console.log(`Server listens http://${host}:${port}`))
+app.listen(port, host, () => console.log(`Server listens http://${host}:${port}`))
